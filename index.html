@@ -32,8 +32,10 @@
       align-items: center;
       padding: 2rem;
       background-color: rgba(0, 0, 0, 0.5);
-      margin: 2rem;
+      margin: 2rem auto;
       border-radius: 15px;
+      width: 90%;
+      max-width: 800px;
     }
 
     .grafico {
@@ -51,12 +53,36 @@
     }
 
     .explicacion {
-      max-width: 800px;
+      width: 100%;
       line-height: 1.6;
       font-size: 1.1rem;
       background-color: rgba(0, 0, 0, 0.6);
       padding: 1.5rem;
       border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    .explicacion img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+
+      .explicacion {
+        font-size: 1rem;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -74,10 +100,10 @@
 
   <div class="container">
     <div class="explicacion">
-        <h2>¡Hola!</h2>
-        <p>Página web en mantención.</p>
-        <p>Mantente atento.</p>
-        <img src="Resources/tt.png" alt="uwu" />
+      <h2>¡Hola!</h2>
+      <p>Página web en mantención.</p>
+      <p>Mantente atento.</p>
+      <img src="Resources/tt.png" alt="uwu" />
     </div>
   </div>
 </body>
