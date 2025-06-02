@@ -15,7 +15,7 @@
       text-shadow: 1px 1px 3px #000;
     }
 
-    header {
+    header, footer {
       text-align: center;
       padding: 2rem;
       background-color: rgba(0, 0, 0, 0.6);
@@ -60,7 +60,7 @@
       max-width: 100%;
       height: auto;
       display: block;
-      margin-top: 1rem;
+      margin: 1rem auto;
     }
 
     .grafico img {
@@ -69,6 +69,12 @@
       border: 2px solid #00ffff;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: 2rem;
     }
 
     @media (max-width: 600px) {
@@ -101,54 +107,63 @@
   </audio>
 
   <script>
-    document.body.addEventListener('click', function() {
+    document.body.addEventListener('click', function () {
       var audio = document.getElementById('music');
       if (audio.paused) {
-        audio.volume = 0.1; // volumen moderado (0.0 a 1.0)
+        audio.volume = 0.1;
         audio.play();
       }
     });
   </script>
-  
+
   <main>
     <div class="container">
       <!-- Sección de bienvenida -->
       <section class="explicacion">
         <h2>¡Bienvenido al sitio!</h2>
-        <p>Aquí exploraremos los avistamientos de OVNIs ocurridos a lo largo del tiempo, especialmente en distintas regiones de los Estados Unidos. Utilizando herramientas como BigQuery,
-            DataPrep, R Studio y GCloud, realizaremos una visualización de los resultados obtenidos en una amplia base de datos que abarca datos desde 1945 hasta la actualidad.
+        <p>
+          Aquí exploraremos los avistamientos de OVNIs ocurridos a lo largo del tiempo, especialmente en distintas regiones de los Estados Unidos.
+          Utilizando herramientas como BigQuery, DataPrep, R Studio y GCloud, realizaremos una visualización de los resultados obtenidos en una amplia base de datos que abarca datos desde 1945 hasta la actualidad.
         </p>
         <p>Te invitamos a quedarte y sumergirte en el misterio. ✨</p>
-        <img src="Resources/Pinochet and the Marciano.jpg" style="display: block; margin: 1rem auto;" alt="Imagen OVNI">
+        <img src="Resources/Pinochet and the Marciano.jpg" alt="Imagen OVNI humorística" />
       </section>
 
-      <!-- Grafico 1: Avistamientos de OVNIs según forma -->
+      <!-- Grafico 1 -->
       <section class="explicacion">
         <h2>Gráfico 1: Avistamientos de OVNIs según forma</h2>
         <img src="Resources/Grafico 1.png" alt="Grafico 1">
-        <p>En este gráfico observamos la cantidad de avistamientos de OVNIs según forma.
-            Destaca en el estudio, los patrones de avistamientos que más redundan, como las luces, esferas y discos.
+        <p>
+          En este gráfico observamos la cantidad de avistamientos de OVNIs según forma.
+          Destacan los patrones más comunes como luces, esferas y discos.
         </p>
       </section>
 
-      <!-- Grafico 2: Avistamientos de OVNIs por año -->
+      <!-- Grafico 2 -->
       <section class="explicacion">
         <h2>Gráfico 2: Avistamientos de OVNIs por año</h2>
         <img src="Resources/Grafico 2.jpg" alt="Grafico 2">
-        <p>En este gráfico observamos la cantidad de avistamientos de OVNIs por año.
-           La mayor tasa de avistamientos engloba principalmente en los años 2012, 2013 y 2011.
+        <p>
+          En este gráfico observamos la cantidad de avistamientos de OVNIs por año.
+          La mayor concentración se da en los años 2012, 2013 y 2011.
         </p>
       </section>
 
-      <!-- Grafico 3: Avistamientos de OVNIs por estado -->
+      <!-- Grafico 3 -->
       <section class="explicacion">
         <h2>Gráfico 3: Avistamientos de OVNIs por estado</h2>
         <img src="Resources/Grafico 3.png" alt="Grafico 3">
-        <p>En este gráfico observamos la cantidad de avistamientos de OVNIs por estado.
-           Se observa mayor incidencia de avistamientos en los estados de California, Washington y Florida.
+        <p>
+          Este gráfico muestra la distribución por estado.
+          Los estados con más reportes son California, Washington y Florida.
         </p>
       </section>
     </div>
   </main>
+
+  <footer>
+    <p>© 2025 - Investigación realizada por Francisco Sánchez, Fernanda Pérez y Javier Quezada</p>
+    <p>No te quedes con lo que se dice, mira hacia el cielo para descubrirlo. 🚀</p>
+  </footer>
 </body>
 </html>
