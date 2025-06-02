@@ -94,13 +94,22 @@
     <p>¡Explora los fenómenos más misteriosos del cielo!</p>
   </header>
 
-  <!-- 🎵 MÚSICA DE FONDO -->
-  <!-- Cambia "audio/musica-fondo.mp3" por la ruta real a tu archivo de audio -->
-  <audio autoplay loop>
-    <source src="audio/musica-fondo.mp3" type="audio/mpeg" />
+  <!-- Música -->
+  <audio id="music" loop preload="auto">
+    <source src="Resources/Song.mp3" type="audio/mpeg">
     Tu navegador no soporta la reproducción de audio.
   </audio>
 
+  <script>
+    document.body.addEventListener('click', function() {
+      var audio = document.getElementById('music');
+      if (audio.paused) {
+        audio.volume = 0.1; // volumen moderado (0.0 a 1.0)
+        audio.play();
+      }
+    });
+  </script>
+  
   <main>
     <div class="container">
       <!-- Sección de bienvenida -->
@@ -124,7 +133,7 @@
       <!-- Grafico 2: Avistamientos de OVNIs por año -->
       <section class="explicacion">
         <h2>Gráfico 2: Avistamientos de OVNIs por año</h2>
-        <img src="Resources/dddd" alt="Grafico 2">
+        <img src="Resources/Grafico 2.jpg" alt="Grafico 2">
         <p>En este gráfico observamos la cantidad de avistamientos de OVNIs por año.
            La mayor tasa de avistamientos engloba principalmente en los años 2012, 2013 y 2011.
         </p>
